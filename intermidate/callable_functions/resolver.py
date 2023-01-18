@@ -1,5 +1,7 @@
 import socket
 
+# functions in themselves are callable
+
 
 class Resolver:
     def __init__(self):
