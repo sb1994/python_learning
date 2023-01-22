@@ -16,4 +16,8 @@ class SortedSet:
         return iter(self._items)
 
     def __getitem__(self, index):
-        return self._items[index]
+        result = self._items[index]
+        return SortedSet(result) if isinstance(index, slice) else result
+
+    def __repr__(self):
+        return "Sorted({})".format(repr(self._items) if self._items else '')
